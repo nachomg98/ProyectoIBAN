@@ -10,12 +10,12 @@ namespace ProyectoIBAN
         /// </summary>
         /// <param name="IBAN"></param>
         /// <returns></returns>
-        public bool EsIBANvalido(string IBAN)
+        public static bool EsIBANvalido(string IBAN)
         {
             return IBAN == calcularIban(IBAN.Substring(4));
         }
 
-        private string calcularIban(string ccc)
+        public static string calcularIban(string ccc)
         {
             // Calculamos el IBAN
             string numeroCalcular = ccc.Trim();
